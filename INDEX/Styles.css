@@ -143,7 +143,7 @@ section {
     gap: 2rem; /*gap between lines of text*/
 }
 
-h1, h3 {
+h2, h3 {
     background-color: lightpink;
     border: 5px dotted black;
     padding: 5px;
