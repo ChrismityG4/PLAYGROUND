@@ -7,6 +7,7 @@
     <meta name="keywords" content=""> <!--KEYWORD SEARCH ENGINE OPTIMISATION-->
     <meta name="description" content=""> <!--DESCRIPTION THAT APPEARS ON SEARCH ENGINES-->
             <!--OTHER USEFUL META-->
+    <style>body{background-color:antiquewhite;}</style>
     <title>Cheatsheet</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
     <a href="#header 4">HEADER 4</a> <!--ANCHOR LINK TO PARTS OF THIS PAGE (# IS FOR SPECIFIED ID)-->
     <a href="#header 5">HEADER 5</a> <!--ANCHOR LINK TO PARTS OF THIS PAGE (# IS FOR SPECIFIED ID)-->
     <a href="#header 6">HEADER 6</a> <!--ANCHOR LINK TO PARTS OF THIS PAGE (# IS FOR SPECIFIED ID)-->
+    <a href="#form">FORM</a> <!--ANCHOR LINK TO PARTS OF THIS PAGE (# IS FOR SPECIFIED ID)-->
     <a href="#bottom">BOTTOM PAGE</a> <!--ANCHOR LINK TO PARTS OF THIS PAGE (# IS FOR SPECIFIED ID)-->
     <p>
         <a href="https://www.google.com/" target="_blank">GOOGLE</a>
@@ -53,9 +55,93 @@
     <P><mark>Header</mark></P> <!--HIGHLIGHTS TEXT-->
     <p>Do you love <span style="color: blue;">DOGS</span> as much as me?</p>
         <!--ALLOWS MARK UP OR PORTIONS OF TEXT-->
+        <!--CAN SPECIFIY STYLE OF SPANS IN CSS-->
     <P>&copy</P> <!--ENTITY FOR COPYRIGHT SIGN-->
-    <a href="#" id="bottom">JUMP TO TOP</a> <!--1 # TO JUMP TO TOP OF PAGE-->
+    <hr> <!--CREATES THIN LIGHT GREY LINE-->
+    <ul> <!--BULLET POINT LIST (CREATED AS INDENTATION)-->
+        <!--CAN SET TYPE OF ul TO CHANGE STYLE-->
+        <li>1</li> 
+        <li>2</li>
+    </ul>
+    <ol> <!--NUMBERED LIST (CREATED AS INDENTATION)-->
+        <!--CAN SET TYPE OF ol TO I (ROMAN NUMERS)-->
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    <dl> <!--DESCRIPTION LIST-->
+        <dt>TERM</dt> <!--DESCRITOON TERM-->
+        <dd>DESCRIPTION</dd> <!--DESCRIPTION OF TERM-->
+    </dl>
+
+    <form id="form" action="/PAGES/formsubmitted.html" method="get"> <!--CREATES FORM FOR USER INTERACTION-->
+            <!--action (SPECIFIES LINK ADDRESS FOR FORM SUBMISSION)-->
+            <!--ID FOR TOP PAGE ANCHOR LINKS-->
+            <!--method (SPECIFIES HOW TO SEND DATA get/post)-->
+            <!--post (USED FOR SENSITIVE DATA, INFO NOT SHOWN IN URL)-->
+        <Label for="age">AGE:</Label> <!--SPECIFIES REQUIRED INFO FOR INPUT-->
+                <!--for (WHEN CLICKING AGE LINKS TO id OF INPUT)-->
+        <input type="number" id="age" placeholder="ENTER AGE HERE" name="age" required> <!--INPUT FROM USERS -->
+            <!--type (SPECIFIES AS TEXT INPUT)-->
+            <!--id (ALLOWS LINK OF FOR FROM LABEL)-->
+            <!--placeholder (PROMPTS USER WHAT TO WRITE)-->
+            <!--name (SPECIFIES TITLE OF DATA SENT TO SERVER)--> 
+            <!--required (SPECIFIES INPUT IS REQUIRED)-->
+
+        <fieldset> <!--GROUPS INPUT OPTIONS INTO BOX-->
+            <legend>DO YOU LIKE DOGS?</legend> <!--legend (ACTS AS LABEL FOR fieldset)-->
+            <label for="yes">YES <!--INPUT NESTED IN LABEL (for LINKS TO id INPUT OPTION)-->
+                <input type="radio" id="yes" name="likesdogs" value="yes"> <!--INPUT FROM USERS -->
+            </label> 
+                <label for="no"> NO
+            <input type="radio" id="no" name="likesdogs" value="no"> <!--INPUT FROM USERS -->
+            </label>
+            <!--NEST INPUT INSIDE LABEL FOR LABEL NAME BEFORE CLICK OPTION-->
+            <!--radio (CREATES SELECT CIRCLE USER INPUT)-->
+            <!--id (ALLOWS LINK OF FOR FROM LABEL)-->
+            <!--name (SPECIFIES TITLE OF DATA SUBMITTED TO SERVER)-->
+            <!--WHEN name THE SAME FOR radio, ONLY 1 CAN BE SELECTED--> 
+            <!--value (SPECIFIES OPTION SELECTED WHEN SUBMITTED)--> 
+        </fieldset>
+
+        <fieldset> <!--GROUPS INPUT OPTIONS INTO BOX-->
+            <legend>DO YOU LIKE CATS?</legend> <!--legend (ACTS AS LABEL FOR fieldset)-->
+            YES<input type="radio" name="likescats" value="yes">YES<!--INPUT FROM USERS -->
+            NO<input type="radio" name="likescats" value="no" checked> NO<!--INPUT FROM USERS -->
+            <!--NO LABEL NESTING, CAN PLACE OPTION BEFORE/AFTER INPUT(NO id + for LINKING)-->
+            <!--radio (CREATES SELECT CIRCLE USER INPUT)-->
+            <!--name (SPECIFIES TITLE OF DATA SUBMITTED TO SERVER)-->
+            <!--WHEN name THE SAME FOR radio, ONLY 1 CAN BE SELECTED--> 
+            <!--value (SPECIFIES OPTION SELECTED WHEN SUBMITTED)--> 
+            <!--checked (PRE SELECTS AN OPTION)-->
+        </fieldset>
+
+        <fieldset> <!--GROUPS INPUT OPTIONS INTO BOX-->
+            <legend>WHAT ANIMALS DONT YOU LIKE?</legend> <!--legend (ACTS AS LABEL FOR fieldset)-->
+            HAMSTER<input type="checkbox" name="dislikes" value="hamster">HAMSTER<!--INPUT FROM USERS -->
+            RABBIT<input type="checkbox" name="dislikes" value="Rabbit"> RABBIT<!--INPUT FROM USERS -->
+            <!--NO LABEL NESTING, CAN PLACE OPTION BEFORE/AFTER INPUT(NO id + for LINKING)-->
+            <!--type (SPECIFIES CHECKBOX OPTION)-->
+            <!--checkbox (CAN SELECT MULTIPLE OPTIONS)-->
+            <!--name (SPECIFIES TITLE OF DATA SUBMITTED TO SERVER)-->
+            <!--value (SPECIFIES OPTION SELECTED WHEN SUBMITTED)--> 
+        </fieldset>
+
+        <label>WHAT OTHER ANIMALS DO YOU LIKE?</label> <!--SPECIFIES REQUIRED INFO FOR INPUT-->
+            <input type="checkbox" name="likes" value="hamster">HAMSTER <!--INPUT FROM USERS -->
+            <input type="checkbox" name="likes" value="rabbit">RABBIT <!--INPUT FROM USERS -->
+                <!--type (SPECIFIES CHECKBOX OPTION)-->    
+                <!--checkbox (CAN SELECT MULTIPLE OPTIONS)-->   
+                <!--name (SPECIFIES TITLE OF DATA SUBMITTED TO SERVER)-->
+                <!--value (SPECIFIES OPTION SELECTED WHEN SUBMITTED)-->
+        <div>
+            <button type="submit">Submit</button> <!--BUTTON FOR SUBMITTING FORM-->
+        </div>
+    </form>
+    <div>
+        <a href="#" id="bottom">JUMP TO TOP</a> <!--1 # TO JUMP TO TOP OF PAGE-->
+    </div>
 </body>
 </html>
+
 
 <!---->

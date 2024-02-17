@@ -8,7 +8,8 @@
 
 .backgroundImg { /*Class = background img*/
     border: 5px solid white;
-    background-color: chartreuse;
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0)75%, rgb(0, 0, 255));
+    /*BLENDS COLORS, deg (SETS DIRECTION OF BLEND) % (SETS SPACE TAKEN UP BY COLOR)*/
     padding: 50px;
     position: fixed; /*reamin stationary on webpage*/
     top: 0; /*ignores padding of page (fullscreen)*/
@@ -145,10 +146,19 @@ section {
     gap: 2rem; /*gap between lines of text*/
 }
 
-h2, h3 {
+h2 {
     background-color: lightpink;
     border: 5px dotted black;
     padding: 5px;
+    box-shadow: 5px 5px 5px  green; /*HORIZONTAL, VERTICAL, BLUR, COLOR*/
+}
+
+h3 {
+    background-color: lightpink;
+    border: 5px dotted black;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(13, 13, 216, 50%); /*HORIZONTAL, VERTICAL, BLUR, RADIUS, COLOR*/
+        /*50% OPACITIY OF COLOR*/
 }
 
 .textContainer p {
