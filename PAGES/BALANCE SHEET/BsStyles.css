@@ -17,17 +17,18 @@ body {
     background-color: aliceblue;
 }
 
-span[class~="sr-only"] {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    clip-path: inset(50%) !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    position: absolute !important;
-    padding: -1px !important;
-    margin: -1px !important;
+span[class~="sr-only"] { /*SETTINGS FOR SCREEN READER ONLY TO MAKE SPANS INVISIBLE*/
+    clip: rect(1px, 1px, 1px, 1px) !important; /**/
+    clip-path: inset(0%) !important; /*PAIR OF SETTINGS TO MAKE INVISIBLE*/
+    border: 0 !important; /**/
+    width: 1px !important; /**/
+    height: 1px !important; /**/
+    overflow: hidden !important; /**/
+    white-space: nowrap !important; /**/
+    position: absolute !important; /**/
+    padding: -1px !important; /**/ 
+    margin: -1px !important; /*8 LINES OF CODE EFFECTIVELY AS BACK UP FOR FIRST 2 LINES*/
+    /*MARKED !IMPORTANT TO TAKE PRIORITY*/
 }
 
 h1 {
@@ -38,11 +39,11 @@ h1 {
 
 h1 .flex {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /*REVERSES ORDER FOR SEO*/
     gap: 1rem;
   }
 
-h1 .flex span:first-of-type {
+h1 .flex span:first-of-type { 
     font-size: 0.7em;
 }
 
@@ -68,7 +69,7 @@ section {
     z-index: 999;
 }
 
-#years span[class] {
+#years span { /*EFFECTING SPANS WITHIN ID OF YEARS*/
     font-weight: bold;
     width: 4.5rem;
     text-align: right;
@@ -91,7 +92,7 @@ table caption {
     font-size: 1.3em;
     font-weight: normal;
     position: absolute;
-    top: -2.25rem;
+    top: -2.25rem; /*MOVED CAPTION UP*/
     margin-left: 0.5rem;
 }
 

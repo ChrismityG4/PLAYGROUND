@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    height: 100vh;
+    height: 100vh; /*vh(100% VIEW HEIGHT)*/ 
     margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
@@ -22,7 +22,7 @@ form {
     margin: 0 auto;
     min-width: 300px;
     max-width: 500px;
-    width: 60vw;
+    width: 60vw; /*vw (60% VIEW WIDTH)*/
     padding-bottom: 2em;
 }
 
@@ -32,14 +32,14 @@ fieldset {
     border-bottom: 3px solid #3b3b4f;
 }
 
-fieldset:last-of-type {
+fieldset:last-of-type { /*SELECTS LAST OF THIS TYPE*/
     border-bottom: none;
 }
 
 input, textarea, select {
-    width: 100%;
-    margin: 10px 0 0 0;
-    min-height: 2em;
+    width: 100%; /*100% WIDTH OF FORM WIDTH*/
+    margin: 10px 0 0 0; /*TOP, RIGHT, B0TTOM, LEFT*/
+    min-height: 2em; /**/
 }
 
 input, textarea {
@@ -54,7 +54,7 @@ input, textarea {
     vertical-align: middle;
 }
 
-input[type="submit"]{
+input[type="submit"]{ /*SPECIFIES CHILD OF PARENT*/
     display: block;
     width: 60%;
     margin: 1em auto;
@@ -65,7 +65,7 @@ input[type="submit"]{
     min-width: 300px;
 }
 
-input[type="file"]{
+input[type="file"]{ /*SPECIFIES CHILD OF PARENT*/
     padding: 1px 2px;
 }
 
