@@ -38,6 +38,7 @@ header {
     margin: 30px 30px 10px 30px ; /*TOP RIGHT BOTTOM LEFT*/
     display: flex; /*flex section to row format*/
     justify-content:space-between; /*pace between links and social links*/
+    align-items: center; /*CENTERS VERTICALLY*/   
 }
 
 .logo {
@@ -52,8 +53,9 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 0 20px 0 20px; /*TOP RIGHT BOTTOM LEFT*/
+    justify-content:center;
+    margin: 0 10px;
+    padding: 10PX; 
     gap: 8px; /*gap between text*/
 }
 
@@ -66,7 +68,7 @@ nav {
 }
 
 .headerLinks:hover {
-    font-size: 1.2em; /*font sixe change on hover*/
+    font-size: 1.1em; /*font sixe change on hover*/
     color: darkgray /*font color change on hover*/
 }
 
@@ -109,7 +111,7 @@ nav {
 .socialLinks {
     background-color: yellow;
     border: 5px dotted black;
-    padding: 2px;
+    padding: 10px;
     display: flex; /*allows for next atribute*/
     align-items: center; /*vertically centers in div*/
 }
@@ -243,7 +245,6 @@ h3 {
     nav {
         flex-wrap: wrap; /*wraps text to lower row*/
         gap: 4px; /*pixel gap between text*/
-        padding: 0 10px 0 10px; /*TOP RIGHT BOTTOM LEFT*/
         margin: 5px;
         justify-content: center; /*centers text in div*/
     }
@@ -276,10 +277,6 @@ h3 {
 @media (min-width: 1000px){ /*specifies when screen size above 1000px the following atributes apply*/
     header {
         justify-content:space-around; /*even spaing around divs in header*/
-    }
-
-    nav {
-        gap: 60px; /*pizel gap between van link text*/
     }
 
     section {
