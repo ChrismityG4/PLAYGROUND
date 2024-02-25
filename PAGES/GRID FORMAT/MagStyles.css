@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%; /* % OF STANDARD HTML PIZEL SIZE*/
+  }
+  
+  body {
+    font-family: 'Baskervville', serif;
+    color: linen;
+    background-color: rgb(20, 30, 40);
+  }
+  
+  h1 {
+    font-family: 'Anton', sans-serif;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: linen;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+    /*GRID SCREEN SETTING minmax ACTS LIKE FLEX TO SIZE OF SCREEN*/
+    /*1fr (1 FRACTION OF SCREEN SIZE)(USED AS LEFT/RIGHT PADDING OF TEXT)*/
+    /*94rem (SPECIFIES THE SPACE TAKEN OF THE TEXT COLUMNS)*/
+    row-gap: 3rem; /*GAP BETWEEN ROWS*/
+  }
+  
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  hr {
+    margin: 1.5rem 0;
+    border: 1px solid rgba(120, 120, 120, 0.6);
+  }
+  
+header a {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+  .heading {
+    grid-column: 2 / 3; /*2 (SPECIFIES START COLUMN) 3 (SPECIFIES END COLUMN)*/
+          /*SIMILAR TO LEFT/RIGHT MARGIN*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*repeat (SPECIFIES HOW MANY COLUMS IN SECTION (2) )*/
+    /*1fr (SPECIFIES 100% OF SECTION SIZE)*/
+    row-gap: 1.5rem;
+  }
+  
+  .text {
+    grid-column: 2 / 3; /*2 (SPECIFIES START COLUMN) 3 (SPECIFIES END COLUMN)*/
+            /*SIMILAR TO LEFT/RIGHT MARGIN*/
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
+    column-width: 25rem; 
+    text-align: justify; /*justify (EVENLY SPACES TEXT TRHOUGHOUT COLUMN)*/
+  }
+  
+  .hero {
+    grid-column: 1 / -1; /*1 (SPECIFIES START COLUMN) -1 (SPECIFIES END COLUMN)*/
+          /*ABOVE SETTINGS MAKES SECTION USE WHOLE WIDTH OF A 1 COLUMN PAGE*/      
+          /*SIMILAR TO LEFT/RIGHT MARGIN*/
+    position: relative;
+  }
+  
+  .hero-title {
+    text-align: center;
+    color: orangered;
+    font-size: 8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+  }
+  
+  .author {
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .author-name a:hover {
+    background-color: #306203;
+  }
+  
+  .publish-date {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .social-icons {
+    display: grid;
+    font-size: 3rem;
+    grid-template-columns: repeat(5, fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+  }
+  
+  .first-paragraph::first-letter {
+    font-size: 6rem;
+    color: orangered;
+    float: left;
+    margin-right: 1rem;
+  }
+  
+  .quote {
+    color: #00beef;
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .quote::before {
+    content: '" ';
+  }
+  
+  .quote::after {
+    content: ' "';
+  }
+  
+  .text-with-images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .lists {
+    list-style-type: none;
+    margin-top: 2rem;
+  }
+  
+  .lists li {
+    margin-bottom: 1.5rem;
+  }
+  
+  .list-title, .list-subtitle {
+    color: #00beef;
+  }
+  
+  .image-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    place-items: center; /*place-items (COMBINED SETTINGS FOR align-items and justify-items)*/ 
+  }
+  
+  .image-1, .image-3 {
+    grid-column: 1 / -1; /*SETTINGS MAKES SECTION USE WHOLE WIDTH OF COLUMN SECTION*/
+  }
+  
+  @media only screen and (max-width: 720px) {
+    .image-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .text-with-images {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .hero-title {
+      font-size: 6rem;
+    }
+    
+    .hero-subtitle,
+    .author,
+    .quote,
+    .list-title {
+      font-size: 1.8rem;
+    }
+    
+    .social-icons {
+      font-size: 2rem;
+    }
+  
+    .text {
+      font-size: 1.6rem;
+    } 
+  }
+  
+  @media only screen and (max-width: 420px) {
+      .hero-title {
+          font-size: 4.5rem;
+      }
+  }
