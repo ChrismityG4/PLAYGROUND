@@ -1,0 +1,118 @@
+.wheel {
+    border: 2px solid black;
+    border-radius: 50%; /*CREATES CIRCLE OF DIV BORDER*/
+    height: 55vw; /*CREATES CIRCLE OF DIV BORDER*/
+    width: 55vw; /*CREATES CIRCLE OF DIV BORDER*/
+    margin-left: 50px; 
+    position: absolute;
+    max-height: 500px;
+    max-width: 500px;
+    animation-name: wheel; /*LINKS TO @keyframe SPECIFIED PROPERTIES*/
+    animation-duration: 10s; /*TIME FOR ANIMATION TO COMPLETE*/
+    animation-iteration-count: infinite; /*SETS ANIMATION REPETITON TO INFINATE*/
+    animation-timing-function: linear; /*linear (SPECIFIES SMOOTHNESS OF ANIMATION)*/
+}
+
+.line {
+    background-color: black;
+    width: 50%; /*LINES TAKE UP 50% OF CONTAINER WIDTH*/
+    height: 2px; /*LINE THICKNESS*/
+    position: absolute;
+    left: 50%; /*DEFINES POSITION IN CONTAINER*/
+    top: 50%; /*DEFINES POSITION IN CONTAINER*/
+    transform-origin: 0% 0%; /*THE CENTER POINT WHERE THE ANIMATION OPERATES*/
+    
+}
+
+.line:nth-of-type(2) { /*nth-of-type (ALLOWS SELECTION OF INDIVIDUAL LINE ELEMENTS BY NUMBER)*/
+    transform: rotate(60deg); /*DEFINES DEGREE OF ROTATION AROUND transform-origion*/
+}
+
+.line:nth-of-type(3) {
+    transform: rotate(120deg);
+}
+
+.line:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+
+.line:nth-of-type(5) {
+    transform: rotate(240deg);
+}
+
+.line:nth-of-type(6) {
+    transform: rotate(300deg);
+}
+
+.cabin {
+    background-color: red;
+    width: 20%; /*SPECIFIES 20% OF WHEEL CONTAINER*/
+    height: 20%; /*SPECIFIES 20% OF WHEEL CONTAINER*/
+    position: absolute;
+    border: 2px solid;
+    transform-origin: 50% 0%; /*THE CENTER POINT WHERE THE ANIMATION OPERATES*/
+    animation: cabins 10s ease-in-out infinite; /*SHORTHAND FOR name, duration, iteration, timing*/
+    /*ease-in-out (SPECIFIES ANIMATION TO START AND END AT A SLOWER SPEED)*/
+}
+
+.cabin:nth-of-type(1) { /*nth-of-type (ALLOWS SELECTION OF INDIVIDUAL LINE ELEMENTS)*/
+    right: -8.5%; /*SPECIFIES POSITION WITHIN WHEEL CONTAINER*/
+    top: 50%; /*SPECIFIES POSITION WITHIN WHEEL CONTAINER*/
+}
+
+.cabin:nth-of-type(2) {
+    right: 17%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(3) {
+    right: 67%;
+    top: 93.5%;
+}
+
+.cabin:nth-of-type(4) {
+    left: -8.5%;
+    top: 50%;
+}
+
+.cabin:nth-of-type(5) {
+    left: 17%;
+    top: 7%;
+}
+
+.cabin:nth-of-type(6) {
+    right: 17%;
+    top: 7%;
+}
+
+@keyframes wheel { /*ANIMATION SETTING SECTION*/
+    0% { /*SPECIFIES START OF ANIMATION*/
+        transform: rotate(0deg);
+    }
+
+    100% { /*SPECIFIES END OF ANIMATION*/
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cabins { /*ANIMATION SETTING SECTION*/
+    0% { /*SPECIFIES START OF ANIMATION*/
+        transform: rotate(0deg);
+    }
+
+    25% {
+        background-color: yellow; /*TRANSFORMS COLOUR AT THIS POINT OF ANIMATION*/
+    }
+
+    50% {
+        background-color: purple; /*TRANSFORMS COLOUR AT THIS POINT OF ANIMATION*/
+    }
+
+    75% {
+        background-color: yellow; /*TRANSFORMS COLOUR AT THIS POINT OF ANIMATION*/
+    }
+
+    100% { /*SPECIFIES END OF ANIMATION*/
+        transform: rotate(-360deg);
+    }
+}

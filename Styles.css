@@ -89,18 +89,18 @@ nav {
     text-decoration: none; /*no underline on link*/
     font-size: 0.7em;
     padding: 8px 0 8px 0; /*TOP RIGHT BOTTOM LEFT*/
+    text-align: center;
 }
 
 .dropDown .buttonContent {
     border: 5px dotted white;
     position: absolute; /*Button reamins fixed, drop down appears under*/
     display: none; /*won't display dropdown, has to hover to display as block*/
-    text-align: center;
 }
-
+    
 .dropDown:hover .buttonContent{
     display: block; /*display dropdown as block when hover*/
-    width: 80px; /*width of dropdown box*/
+    width: 100px; /*width of dropdown box*/
 }
 
 .ddLinks:hover {
